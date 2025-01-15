@@ -1,4 +1,9 @@
 .logo {
-    height: 100px;
-    width: 100px;
+   width: 400px;
+   
+
+}
+
+.navbar {
+    background-color: rgb(17, 97, 97);
 }

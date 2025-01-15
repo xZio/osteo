@@ -1,14 +1,11 @@
 import "./Main.css";
 import Container from "react-bootstrap/Container";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+
 
 function Main() {
   return (
-    <Container fluid>
-      <Header />
+    <Container fluid className="pt-0">
       <main className="main">Main</main>
-      <Footer />
     </Container>
   );
 }
