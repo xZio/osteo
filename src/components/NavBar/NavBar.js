@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../images/logo4.png";
+import logo from "../../images/logo_final.png";
 import "./NavBar.css";
 
 function NavBar() {
@@ -19,16 +19,16 @@ function NavBar() {
 
   return (
     <>
-      <Navbar expand="sm" className="p-0 ">
+      <Navbar expand="sm" className="p-3 ">
         <Container fluid>
           <Row className="align-items-center">
             <Col>
               <Navbar.Brand className="" href="/">
                 <img
                   src={logo}
-                  width="50"
-                  height="50"
-                  className="d-inline-block"
+                  width="70"
+                  height="70"
+                  className="d-inline-block logo"
                   alt="logo"
                 />
               </Navbar.Brand>
