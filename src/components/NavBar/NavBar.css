@@ -1,9 +1,21 @@
 .logo {
-   width: 400px;
-   
-
+  width: 50px;
 }
 
 .navbar {
-    background-color: rgb(17, 97, 97);
+  background-color: #133848;
+}
+
+.link {
+  color: gray;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #c7c3c3;
+}
+
+.active {
+  font-weight: 650;
+  color: #c7c3c3;
 }
