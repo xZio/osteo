@@ -8,16 +8,60 @@
   background-color: #133848;
 }
 
-.link {
-  color: gray;
+#navbar a {
+  color: #31babe;
   text-decoration: none;
+  transition: font 0.3s ease;
+  position: relative;
+  padding: 10px;
+  white-space: nowrap;
 }
 
-.link:hover {
-  color: #c7c3c3;
-}
-
-.active {
+#navbar a:hover,
+#navbar a:focus {
+  text-decoration: none;
   font-weight: 650;
-  color: #c7c3c3;
+  color: #31babe;
+}
+
+.navbar-toggler {
+  padding: 6px 15px;
+  border: 1px solid #31babe;
+  background-image: url(../../images/calendar.svg);
+  transition: border 0.3s ease;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  border: 3px solid #31babe;
+  box-shadow: none;
+}
+
+.button-icon {
+  color: #31babe;
+}
+
+#navbar .navbar-collapse {
+  flex-grow: 0;
+  padding-right: 100px;
+}
+
+#navbar .navbar-collapse a:hover:before,
+#navbar .navbar-collapse a:focus:before {
+  right: 7px;
+  left: 8px;
+  opacity: 1;
+}
+
+#navbar .navbar-collapse a:before {
+  content: "";
+  background: #31babe;
+  height: 1px;
+  position: absolute;
+  bottom: 7px;
+  left: -20px;
+  right: 100%;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  opacity: 0;
 }

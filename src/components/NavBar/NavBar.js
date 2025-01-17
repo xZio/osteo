@@ -1,66 +1,52 @@
 import { Link } from "react-router";
-import { Row, Col } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../../images/logo_final.png";
 import "./NavBar.css";
+import { FiAlignJustify } from "react-icons/fi";
 
 function NavBar() {
-  function handleClick(e) {
-    let list = document.querySelectorAll(".link");
-
-    list.forEach((el) => {
-      console.log(el.classList);
-      el.classList.remove("active");
-    });
-    e.target.classList.add("active");
+  function handleToggle(e) {
+    console.log(e.target.classList);
   }
 
   return (
     <>
-      <Navbar expand="sm" className="p-3 ">
-        <Container fluid>
-          <Row className="align-items-center">
-            <Col>
-              <Navbar.Brand className="" href="/">
-                <img
-                  src={logo}
-                  width="70"
-                  height="70"
-                  className="d-inline-block logo"
-                  alt="logo"
-                />
-              </Navbar.Brand>
-            </Col>
-            <Col className="p-0">
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="align-items-center">
-                  <Nav.Link className="">
-                    <Link to="/" className="link" onClick={handleClick}>
-                      Home
-                    </Link>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <Link to="/about" className="link" onClick={handleClick}>
-                      О себе
-                    </Link>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <Link to="/contacts" className="link" onClick={handleClick}>
-                      Контакты
-                    </Link>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <Link to="/prices" className="link" onClick={handleClick}>
-                      Цены
-                    </Link>
-                  </Nav.Link>
-                </Nav>
-              </Navbar.Collapse>
-            </Col>
-          </Row>
+      <Navbar expand="sm" className="p-3">
+        <Container id="navbar">
+          <Navbar.Brand>
+            <Link to="/">
+              <img
+                src={logo}
+                width="70"
+                height="70"
+                className="d-inline-block logo"
+                alt="logo"
+              />
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav "
+            children={<FiAlignJustify size={40} className="button-icon" />}
+            onClick={handleToggle}
+          />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as="div">
+                <Link to="/">Home</Link>
+              </Nav.Link>
+              <Nav.Link as="div">
+                <Link to="/about">О себе</Link>
+              </Nav.Link>
+              <Nav.Link as="div">
+                <Link to="/contacts">Контакты</Link>
+              </Nav.Link>
+              <Nav.Link as="div">
+                <Link to="/prices">Цены</Link>
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
