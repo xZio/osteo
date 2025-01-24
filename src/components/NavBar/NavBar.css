@@ -31,19 +31,22 @@
   transition: border 0.3s ease;
 }
 
-.navbar-toggler:hover,
-.navbar-toggler:focus {
+.navbar-toggler:hover {
   border: 3px solid #31babe;
+}
+
+.navbar-toggler:focus {
   box-shadow: none;
+  border: 3px solid #31babe;
 }
 
 .button-icon {
   color: #31babe;
 }
 
-#navbar .navbar-collapse {
-  flex-grow: 0;
-  padding-right: 100px;
+.navbar-nav {
+  align-items: flex-start;
+  padding-left: 20px;
 }
 
 #navbar .navbar-collapse a:hover:before,

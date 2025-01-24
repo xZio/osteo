@@ -7,14 +7,10 @@ import "./NavBar.css";
 import { FiAlignJustify } from "react-icons/fi";
 
 function NavBar() {
-  function handleToggle(e) {
-    console.log(e.target.classList);
-  }
-
   return (
     <>
       <Navbar expand="sm" className="p-3">
-        <Container id="navbar">
+        <Container id="navbar" className="m-0">
           <Navbar.Brand>
             <Link to="/">
               <img
@@ -27,9 +23,9 @@ function NavBar() {
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle
+            id="navButton"
             aria-controls="basic-navbar-nav "
             children={<FiAlignJustify size={40} className="button-icon" />}
-            onClick={handleToggle}
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

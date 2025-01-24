@@ -88,11 +88,10 @@ function CallbackForm() {
         <button type="submit" className="form-button" onClick={handleSubmit}>
           Отправить
         </button>
-
-        <div className="callback-icon">
-          {<RiPhoneFill className="phone-logo" />}
-        </div>
       </form>
+      <div className="callback-icon">
+        {<RiPhoneFill className="phone-logo" />}
+      </div>
     </>
   );
 }
