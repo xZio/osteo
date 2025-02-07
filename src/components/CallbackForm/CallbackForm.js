@@ -3,7 +3,8 @@ import { RiPhoneFill } from "react-icons/ri";
 import { useFormAndValidation } from "../../hooks/useFormAndValidation";
 import AirDatepicker from "air-datepicker";
 import "air-datepicker/air-datepicker.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { useClickOutside } from "../../hooks/useClickOutside";
 
 function CallbackForm() {
   const {
@@ -18,6 +19,15 @@ function CallbackForm() {
     //setIsValid,
     handlePhoneChange,
   } = useFormAndValidation();
+  const formRef = useRef(null);
+  useClickOutside(formRef, (e) => {
+    const calendar = document.querySelector(".air-datepicker-nav");
+    if (!calendar && !e.target.closest(".callback-button")) {
+      document
+        .querySelector(".callback-form")
+        .classList.remove("callback-form-active");
+    }
+  });
 
   useEffect(() => {
     // Инициализация AirDatepicker
@@ -31,15 +41,29 @@ function CallbackForm() {
   }, [values, setValues]);
 
   function handleSubmit(e) {
+    const form = document.querySelector(".callback-form");
     console.log(values);
     e.preventDefault();
     resetForm();
+    form.classList.remove("callback-form-active");
     document.getElementById("select").value = "";
+  }
+
+  function handlePhoneFormOpen() {
+    const form = document.querySelector(".callback-form");
+
+    form.classList.value.includes("callback-form-active")
+      ? form.classList.remove("callback-form-active")
+      : form.classList.add("callback-form-active");
   }
 
   return (
     <>
-      <form className="callback-form">
+      <button onClick={handlePhoneFormOpen} className="callback-button">
+        <RiPhoneFill className="phone-logo" />
+      </button>
+
+      <form className="callback-form" ref={formRef}>
         <input
           type="text"
           className="form-input"
@@ -47,6 +71,7 @@ function CallbackForm() {
           name="name"
           onChange={handleChange}
           value={values.name || ""}
+          maxLength={20}
           required
         ></input>
         <input
@@ -89,9 +114,6 @@ function CallbackForm() {
           Отправить
         </button>
       </form>
-      <div className="callback-icon">
-        {<RiPhoneFill className="phone-logo" />}
-      </div>
     </>
   );
 }

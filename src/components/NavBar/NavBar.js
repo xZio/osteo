@@ -30,10 +30,10 @@ function NavBar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as="div">
-                <Link to="/">Home</Link>
+                <Link to="/">О себе</Link>
               </Nav.Link>
               <Nav.Link as="div">
-                <Link to="/about">О себе</Link>
+                <Link to="/about">Сертификаты</Link>
               </Nav.Link>
               <Nav.Link as="div">
                 <Link to="/contacts">Контакты</Link>

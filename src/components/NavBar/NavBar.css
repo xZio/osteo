@@ -6,8 +6,14 @@
 
 .navbar {
   background-color: #133848;
+  flex-grow: 1;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 #navbar a {
   color: #31babe;
   text-decoration: none;
@@ -26,9 +32,10 @@
 
 .navbar-toggler {
   padding: 6px 15px;
+
   border: 1px solid #31babe;
   background-image: url(../../images/calendar.svg);
-  transition: border 0.3s ease;
+  transition: border 0.2s ease;
 }
 
 .navbar-toggler:hover {
@@ -67,4 +74,22 @@
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   opacity: 0;
+}
+
+@media (max-width: 640px) and (min-width: 575px) {
+  #navbar {
+    flex-direction: column;
+  }
+  .navbar-toggler {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  #navbar {
+    flex-direction: column;
+  }
+  .navbar-toggler {
+    margin: 10px 0;
+  }
 }

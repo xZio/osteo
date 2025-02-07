@@ -1,54 +1,53 @@
-.callback-icon {
-  width: 40px;
-  height: 40px;
+@keyframes anim-glow {
+  0% {
+    box-shadow: 0 0 #31babe;
+  }
+  100% {
+    box-shadow: 0 0 40px 20px transparent;
+  }
+}
+
+.callback-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  color: #31babe;
+  border-radius: 50%;
+  border: 2px solid #31babe;
+  background-color: #133848;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid #30d8b2;
-  border-radius: 50%;
-  color: #30d8b2;
-}
-
-.callback-icon::before {
-  content: "";
-  position: absolute;
-  display: flex;
-  width: 170%;
-  height: 170%;
-  z-index: -2;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.callback-icon::after {
-  content: "";
-  position: absolute;
-  display: flex;
-  width: 130%;
-  height: 130%;
-  z-index: -2;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.35);
+  z-index: 2;
+  animation: anim-glow 3s ease infinite;
 }
 
 .phone-logo {
-  width: 64%;
-  height: 64%;
+  width: 85%;
+  height: 85%;
 }
 
 .callback-form {
-  position: relative;
-  display: none;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
   flex-direction: column;
   padding: 15px;
   background-color: #3d4043;
   border-radius: 8px;
-  width: 250px;
-  z-index: -4;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.callback-form-active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .form-input {
@@ -58,7 +57,20 @@
   padding: 5px 10px;
   color: #757575;
   font-size: 14px;
-  height: 20px;
+  height: 30px;
+  width: 95%;
+}
+
+.form-select {
+  border-radius: 4px;
+  margin: 10px;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: #757575;
+  font-size: 14px;
+  border: none;
+  height: 30px;
+  width: 95%;
 }
 
 .form-input:-webkit-autofill,
@@ -74,23 +86,15 @@
 }
 
 .form-button {
-  background-color: #30d8b2;
-  color: #757575;
+  background-color: #31babe;
+  color:white;
   margin: 15px 10px 0;
   border-radius: 4px;
   border: none;
   padding: 10px 5px;
   font-size: 17px;
-}
-
-.form-select {
-  border-radius: 4px;
-  margin: 10px;
-  border-radius: 4px;
-  padding: 5px 10px;
-  color: #757575;
-  font-size: 14px;
-  border: none;
+  width: 95%;
+  font-weight: 650;;
 }
 
 .form-select:focus {
@@ -103,4 +107,10 @@
   background-clip: border-box;
   background-position: right 7px center;
   background-size: 20px 20px;
+}
+
+@media (max-width: 575px) {
+  .callback-button {
+    top: 100px;
+  }
 }

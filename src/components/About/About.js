@@ -1,5 +1,7 @@
+import "./About.css";
+
 function About() {
-  return <div className="about"> About </div>;
+  return <div className="about">О себе</div>;
 }
 
 export default About;
