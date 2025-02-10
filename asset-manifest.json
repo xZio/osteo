@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.46031fd4.css",
-    "main.js": "/static/js/main.5e0f9d6b.js",
-    "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.4df14eb5e72bf55c4497.ttf",
-    "static/media/logo_final.png": "/static/media/logo_final.915dbeb41c71c8e06c19.png",
-    "static/media/slider2.jpg": "/static/media/slider2.4d81a8853379d8079b7b.jpg",
-    "static/media/calendar.svg": "/static/media/calendar.aee7ffe33c1e952c74a6.svg",
-    "index.html": "/index.html",
-    "main.46031fd4.css.map": "/static/css/main.46031fd4.css.map",
-    "main.5e0f9d6b.js.map": "/static/js/main.5e0f9d6b.js.map"
+    "main.css": "/www/static/css/main.d5be43f2.css",
+    "main.js": "/www/static/js/main.278d62c2.js",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/www/static/media/Montserrat-VariableFont_wght.4df14eb5e72bf55c4497.ttf",
+    "static/media/logo_final.png": "/www/static/media/logo_final.915dbeb41c71c8e06c19.png",
+    "static/media/slider2.jpg": "/www/static/media/slider2.4d81a8853379d8079b7b.jpg",
+    "static/media/calendar.svg": "/www/static/media/calendar.aee7ffe33c1e952c74a6.svg",
+    "index.html": "/www/index.html",
+    "main.d5be43f2.css.map": "/www/static/css/main.d5be43f2.css.map",
+    "main.278d62c2.js.map": "/www/static/js/main.278d62c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.46031fd4.css",
-    "static/js/main.5e0f9d6b.js"
+    "static/css/main.d5be43f2.css",
+    "static/js/main.278d62c2.js"
   ]
 }
