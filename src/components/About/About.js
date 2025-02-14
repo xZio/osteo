@@ -1,7 +1,7 @@
 import "./About.css";
 
 function About() {
-  return <div className="about">О себе</div>;
+  return <div className="about"></div>;
 }
 
 export default About;

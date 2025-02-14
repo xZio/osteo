@@ -1,9 +1,9 @@
-import "./Main.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaTelegram } from "react-icons/fa";
+import "./Main.css";
 
 function Main() {
   return (
@@ -18,7 +18,10 @@ function Main() {
             </p>
             <ul>
               <li>
-                <IoMdCheckmarkCircleOutline size={100} className="list-icon" />
+                <i className="list-icon">
+                  <IoMdCheckmarkCircleOutline size={25} />
+                </i>
+
                 <p>
                   Закончил медицинское училище, педиатрический институт.
                   Появилось желание более серьезной работы. В итоге выбрал
@@ -26,7 +29,10 @@ function Main() {
                 </p>
               </li>
               <li>
-                <IoMdCheckmarkCircleOutline size={100} className="list-icon" />
+                <i className="list-icon">
+                  <IoMdCheckmarkCircleOutline size={25} />
+                </i>
+
                 <p>
                   Меня всегда очаровывала мануальная терапия своей
                   загадочностью. В 1998 г. сменил специализацию на неврологию,
@@ -34,7 +40,9 @@ function Main() {
                 </p>
               </li>
               <li>
-                <IoMdCheckmarkCircleOutline size={100} className="list-icon" />
+                <i className="list-icon">
+                  <IoMdCheckmarkCircleOutline size={25} />
+                </i>
                 <p>
                   В процессе работы мануальщиком постепенно понял, что касаюсь
                   остеопатии. Поступил в остеопатический институт. Расширил свои
@@ -42,16 +50,20 @@ function Main() {
                 </p>
               </li>
               <li>
-                <IoMdCheckmarkCircleOutline size={100} className="list-icon" />
+                <i className="list-icon">
+                  <IoMdCheckmarkCircleOutline size={25} />
+                </i>
                 <p>
                   У меня много потрясающих историй, я готов делиться с вами. С
                   удовольствием дам рекомендации по физическим нагрузкам и
                   правильном питании. Подписывайтесь на мой{" "}
-                  <a href="#" className="telegram-link">
-                    <FaTelegram size={20} color="#31babe" />
-                    {" "}телеграм-канал
+                  <a
+                    href="https://github.com/xZio/www/settings/pages"
+                    className="telegram-link"
+                  >
+                    <FaTelegram size={20} color="#31babe" /> телеграм-канал
                   </a>{" "}
-                  и вы узнайте много нового!
+                  и вы узнаете много нового!
                 </p>
               </li>
             </ul>

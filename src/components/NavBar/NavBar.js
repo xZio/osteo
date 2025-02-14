@@ -33,7 +33,7 @@ function NavBar() {
                 <Link to="/">О себе</Link>
               </Nav.Link>
               <Nav.Link as="div">
-                <Link to="/about">Сертификаты</Link>
+                <Link to="/certificates">Опыт</Link>
               </Nav.Link>
               <Nav.Link as="div">
                 <Link to="/contacts">Контакты</Link>
