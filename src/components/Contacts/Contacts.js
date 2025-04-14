@@ -1,5 +1,9 @@
-function Contacts() {
-    return <div className="contacts"> Contacts </div>;
-  }
-  
-  export default Contacts;
+import "./Contacts.css";
+
+import YandexMap from "../YandexMap/YandexMap";
+
+const Contacts = () => {
+  return <YandexMap />;
+};
+
+export default Contacts;

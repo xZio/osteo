@@ -1,6 +1,5 @@
 import "./App.css";
 import { Route, Routes } from "react-router";
-import Main from "../Main/Main";
 import About from "../About/About";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -13,7 +12,7 @@ function App() {
     <div className="app">
       <Header />
       <Routes>
-        <Route exact path="/" element={<Main />} />
+        <Route exact path="/" element={<About />} />
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/prices" element={<Prices />} />

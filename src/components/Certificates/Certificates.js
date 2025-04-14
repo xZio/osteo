@@ -72,143 +72,146 @@ function Certificates() {
 
   return (
     <Container fluid>
-      <div className="experience">
-        <h1 className="expierence-header"> Образование и опыт работы:</h1>
-        <ul>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              1987- 1990
+      <div className="experience-section">
+        <div className="experience">
+          <h1 className="expierence-header"> Образование и опыт работы:</h1>
+          <ul>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                1987- 1990
+              </i>
+              <p>Медицинское училище</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                ⁠1989 - 1990
+              </i>
+              <p>Фельдшер - лаборант</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                1991-1997
+              </i>
+              <p>СПБ ГПМА, врач педиатр</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                ⁠1991-1992
+              </i>
+              <p>Лаборант кафедры микробиологии СПБ ГПМА</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                1997- 1998
+              </i>
+              <p>МАПО, торакальный хирург</p>
+            </li>
+            <li>
+              ⁠
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                1997-1998
+              </i>
+              <p>Хирург торакоабдоминального отделения больницы 26</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                1999
+              </i>
+              <p>МАПО невролог</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                1999
+              </i>
+              <p>СПБ ГПМА мануальный терапевт</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                1999 - 2002
+              </i>
+              <p>Зам. гл. врача в кардиоревматологическом санатории</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                2013-2017
+              </i>
+              <p>ИОМ им. Андрианова, остеопат</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                2003 по н.в.
+              </i>
+              <p>частные медцентры, невролог, ман. терапевт, остеопат</p>
+            </li>
+            <li>
+              <i className="expierence-list-icon">
+                <IoMdCheckmarkCircleOutline size={25} />
+                2022 по н.в.
+              </i>
+              <p>биодинамическая модель в остеопатии Джелоса</p>
+            </li>
+          </ul>
+        </div>
+        <h2 className="serts-header"> Сертификаты:</h2>
+        <div className="serts-paragraf">
+          <p> Друзья, часть моих сертификатов и дипломов.</p>
+          <p>
+            Первый сертификат с лентой для меня самый значимый и ценный:{" "}
+            <span> Институт остеопатической медицины им. В.Л. Андрианова</span>.
+            4 года обучения. Данный институт сотрудничает с преподавателями из
+            Франции, выпускные экзамены принимают французские преподаватели,
+            выпускники получают диплом{" "}
+            <span>Парижской остеопатической школы</span>{" "}
+            <i>
+              <img src={frIcon} alt="иконка флага Франции"></img>
             </i>
-            <p>Медицинское училище</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              ⁠1989 - 1990
-            </i>
-            <p>Фельдшер - лаборант</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              1991-1997
-            </i>
-            <p>СПБ ГПМА, врач педиатр</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              ⁠1991-1992
-            </i>
-            <p>Лаборант кафедры микробиологии СПБ ГПМА</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              1997- 1998
-            </i>
-            <p>МАПО, торакальный хирург</p>
-          </li>
-          <li>
-            ⁠
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              1997-1998
-            </i>
-            <p>Хирург торакоабдоминального отделения больницы 26</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              1999
-            </i>
-            <p>МАПО невролог</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              1999
-            </i>
-            <p>СПБ ГПМА мануальный терапевт</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              1999 - 2002
-            </i>
-            <p>Зам. гл. врача в кардиоревматологическом санатории</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              2013-2017
-            </i>
-            <p>ИОМ им. Андрианова, остеопат</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              2003 по н.в.
-            </i>
-            <p>частные медцентры, невролог, ман. терапевт, остеопат</p>
-          </li>
-          <li>
-            <i className="expierence-list-icon">
-              <IoMdCheckmarkCircleOutline size={25} />
-              2022 по н.в.
-            </i>
-            <p>биодинамическая модель в остеопатии Джелоса</p>
-          </li>
-        </ul>
-      </div>
-      <h2 className="serts-header"> Сертификаты:</h2>
-      <div className="serts-paragraf">
-        <p> Друзья, часть моих сертификатов и дипломов.</p>
-        <p>
-          Первый сертификат с лентой для меня самый значимый и ценный:{" "}
-          <span> Институт остеопатической медицины им. В.Л. Андрианова</span>. 4
-          года обучения. Данный институт сотрудничает с преподавателями из
-          Франции, выпускные экзамены принимают французские преподаватели,
-          выпускники получают диплом{" "}
-          <span>Парижской остеопатической школы</span>{" "}
-          <i>
-            <img src={frIcon} alt="иконка флага Франции"></img>
-          </i>
-          . С остальными можно ознакомиться лично, в моем кабинете.
-        </p>
-      </div>
+            . С остальными можно ознакомиться лично, в моем кабинете.
+          </p>
+        </div>
 
-      <div className="swiper-container">
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView="auto"
-          navigation
-          pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log()}
-          onSlideChange={() => console.log("slide change")}
-          centeredSlides
-          slideToClickedSlide
-          /*  breakpoints={{
+        <div className="swiper-container">
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView="auto"
+            navigation
+            pagination={{ clickable: true }}
+            onSwiper={(swiper) => console.log()}
+            onSlideChange={() => console.log("slide change")}
+            centeredSlides
+            slideToClickedSlide
+            /*  breakpoints={{
             320: { spaceBetween: 40 },
             650: { spaceBetween: 30 },
             1000: { spaceBetween: 20 },
           }} */
-        >
-          {certificatesList.map((el) => (
-            <SwiperSlide>
-              <img
-                src={el.imgSrc}
-                alt={el.title}
-                className="certificate-image"
-              ></img>
+          >
+            {certificatesList.map((el) => (
+              <SwiperSlide>
+                <img
+                  src={el.imgSrc}
+                  alt={el.title}
+                  className="certificate-image"
+                  key={1}
+                ></img>
 
-              <p className="certificate-date">{el.date}</p>
-              <p className="certificate-title">{el.title}</p>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                <p className="certificate-date">{el.date}</p>
+                <p className="certificate-title">{el.title}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </Container>
   );
