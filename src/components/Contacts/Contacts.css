@@ -1,10 +1,61 @@
 .contacts {
   width: 100%;
-  height: 600px;
+  max-width: 100vw;
+  margin: 20px 0;
+  color: #133848;
+}
+
+.map {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.contact-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+.contacts h2 {
+  font-weight: 600;
+  align-self: center;
+}
 
-/* Скрываем стандартный хвостик */
+.phone-contact {
+  margin-top: 32px;
+  font-size: 23px;
+  color: #31babe;
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  font-size: 50px;
+  border: 2px solid #31babe;
+  border-radius: 11px;
+  background-color: #e6ecee;
+  margin-right: 15px;
+  padding: 2px;
+  min-width: 50px;
+  height: 50px;
+}
+
+.adress-contact {
+  font-size: 18px;
+  color: #31babe;
+  display: flex;
+  align-items: flex-start;
+}
+
+.address-icon {
+  padding: 5px;
+}
+
+@media (max-width: 870px) {
+
+  .phone-contact {
+    font-size: 19px;
+  }
+}

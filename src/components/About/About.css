@@ -1,11 +1,17 @@
-.main {
-  min-height: 720px;
+.about {
   position: relative;
   background-image: url(../../images/slider2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right top;
 }
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 ul {
   list-style: none;
@@ -14,11 +20,20 @@ ul {
   align-items: flex-start;
 }
 
-h1 {
+.about h1 {
   font-size: 50px;
   color: #133848;
+  font-weight: 650;
+  margin: 20px;
+}
+
+.about h2 {
+  font-size: 40px;
+  color: #0c6f72;
   font-weight: 600;
-  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 p {
@@ -33,7 +48,6 @@ li {
 
 .list-icon {
   color: #31babe;
-
 }
 
 .telegram-link {

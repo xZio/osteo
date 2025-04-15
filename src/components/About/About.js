@@ -8,8 +8,14 @@ import "./About.css";
 function About() {
   return (
     <>
-      <Container fluid className="main">
-        <h1>Врач-остеопат</h1>
+      <Container fluid className="about">
+        <Col md={9} className="about-header">
+          <h1>Остеопат</h1>
+          <h2>
+            <span>Мануальный</span>
+            <span>терапевт</span>
+          </h2>
+        </Col>
         <Row>
           <Col sm={5}>
             <p>
@@ -58,7 +64,9 @@ function About() {
                   удовольствием дам рекомендации по физическим нагрузкам и
                   правильном питании. Подписывайтесь на мой{" "}
                   <a
-                    href="https://github.com/xZio/www/settings/pages"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://t.me/chelomosteo"
                     className="telegram-link"
                   >
                     <FaTelegram size={20} color="#31babe" /> телеграм-канал
