@@ -8,7 +8,7 @@ import "./About.css";
 function About() {
   return (
     <>
-      <Container fluid className="about">
+      <Container fluid className="about no-padding">
         <Col md={9} className="about-header">
           <h1>Остеопат</h1>
           <h2>
@@ -17,10 +17,10 @@ function About() {
           </h2>
         </Col>
         <Row>
-          <Col sm={5}>
+          <Col sm={5} className="about-content">
             <p>
-              Дорогие друзья, меня зовут Александр Челомбиткин! <br /> Вот
-              несколько интересных фактов обо мне:
+              Дорогие друзья, меня зовут <strong> Александр Челомбиткин</strong>
+              ! <br /> Вот несколько интересных фактов обо мне:
             </p>
             <ul>
               <li>

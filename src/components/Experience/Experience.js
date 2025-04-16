@@ -6,18 +6,18 @@ import { institutionList } from "../../data/education";
 
 function Experience() {
   return (
-    <Container fluid>
+    <Container fluid className="no-padding">
       <div className="experience-section">
         <div className="experience">
           <h1 className="expierence-header"> Образование и опыт работы:</h1>
           <ul>
             {institutionList.map((el, index) => {
               return (
-                <li key={index}>
-                  <i className="expierence-list-icon">
+                <li key={index} className="li-item">
+                  <div className="expierence-list-icon">
                     <IoMdCheckmarkCircleOutline size={25} />
-                    {el.year}
-                  </i>
+                    <span>{el.year}</span>
+                  </div>
                   <p>{el.name} </p>
                 </li>
               );
@@ -26,7 +26,6 @@ function Experience() {
         </div>
         <Certificates />
       </div>
-      
     </Container>
   );
 }
