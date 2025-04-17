@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.075007ce.css",
-    "main.js": "/static/js/main.7198e629.js",
-    "static/media/RoadTo.mp4": "/static/media/RoadTo.bb08207f3aad44dfec38.mp4",
-    "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.4df14eb5e72bf55c4497.ttf",
-    "static/media/9.jpg": "/static/media/9.06dc934640b2af62eb80.jpg",
-    "static/media/8.jpg": "/static/media/8.0d96cc2b9bfc88fa2280.jpg",
-    "static/media/6.jpg": "/static/media/6.e771b9834b2f87f0b942.jpg",
-    "static/media/orth.jpg": "/static/media/orth.590146f6762ea3537bd2.jpg",
-    "static/media/1.jpg": "/static/media/1.c666eaeab58d5ada77ba.jpg",
-    "static/media/5.jpg": "/static/media/5.5a0765d1365ab8693403.jpg",
-    "static/media/7.jpg": "/static/media/7.f1e49722892145e31bc8.jpg",
-    "static/media/4.jpg": "/static/media/4.d31f1393b724d2bad9f5.jpg",
-    "static/media/logo_final.png": "/static/media/logo_final.915dbeb41c71c8e06c19.png",
-    "static/media/2.jpg": "/static/media/2.5f1c88fc6de1c916d87a.jpg",
-    "static/media/3.jpg": "/static/media/3.be5795131cdc08638ea6.jpg",
-    "static/media/slider2.jpg": "/static/media/slider2.4d81a8853379d8079b7b.jpg",
-    "static/media/mark.png": "/static/media/mark.0048995f6990eb0cef18.png",
-    "static/media/calendar.svg": "/static/media/calendar.aee7ffe33c1e952c74a6.svg",
-    "index.html": "/index.html",
-    "main.075007ce.css.map": "/static/css/main.075007ce.css.map",
-    "main.7198e629.js.map": "/static/js/main.7198e629.js.map"
+    "main.css": "/osteo/static/css/main.9839c1d3.css",
+    "main.js": "/osteo/static/js/main.27effd16.js",
+    "static/media/RoadTo.mp4": "/osteo/static/media/RoadTo.bb08207f3aad44dfec38.mp4",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/osteo/static/media/Montserrat-VariableFont_wght.4df14eb5e72bf55c4497.ttf",
+    "static/media/9.jpg": "/osteo/static/media/9.06dc934640b2af62eb80.jpg",
+    "static/media/8.jpg": "/osteo/static/media/8.0d96cc2b9bfc88fa2280.jpg",
+    "static/media/6.jpg": "/osteo/static/media/6.e771b9834b2f87f0b942.jpg",
+    "static/media/orth.jpg": "/osteo/static/media/orth.590146f6762ea3537bd2.jpg",
+    "static/media/1.jpg": "/osteo/static/media/1.c666eaeab58d5ada77ba.jpg",
+    "static/media/5.jpg": "/osteo/static/media/5.5a0765d1365ab8693403.jpg",
+    "static/media/7.jpg": "/osteo/static/media/7.f1e49722892145e31bc8.jpg",
+    "static/media/4.jpg": "/osteo/static/media/4.d31f1393b724d2bad9f5.jpg",
+    "static/media/logo_final.png": "/osteo/static/media/logo_final.915dbeb41c71c8e06c19.png",
+    "static/media/2.jpg": "/osteo/static/media/2.5f1c88fc6de1c916d87a.jpg",
+    "static/media/3.jpg": "/osteo/static/media/3.be5795131cdc08638ea6.jpg",
+    "static/media/slider2.jpg": "/osteo/static/media/slider2.4d81a8853379d8079b7b.jpg",
+    "static/media/mark.png": "/osteo/static/media/mark.0048995f6990eb0cef18.png",
+    "static/media/calendar.svg": "/osteo/static/media/calendar.aee7ffe33c1e952c74a6.svg",
+    "index.html": "/osteo/index.html",
+    "main.9839c1d3.css.map": "/osteo/static/css/main.9839c1d3.css.map",
+    "main.27effd16.js.map": "/osteo/static/js/main.27effd16.js.map"
   },
   "entrypoints": [
-    "static/css/main.075007ce.css",
-    "static/js/main.7198e629.js"
+    "static/css/main.9839c1d3.css",
+    "static/js/main.27effd16.js"
   ]
 }
