@@ -12,6 +12,19 @@ const YandexMap = () => {
     if (!ymaps || !mapRef.current || mapInstance.current) return;
     if (ymaps) {
     }
+    const isMobile = window.innerWidth <= 768;
+    const initialParams = {
+      center: [59.86401, 30.408437],
+      zoom: 18,
+      controls: ["zoomControl", "fullscreenControl"],
+      margin: isMobile ? [100, 90, 50, 90] : [200, 200, 100, 200],
+    };
+
+    if (isMobile) {
+      initialParams.zoom = 17;
+      initialParams.center = [59.86406, 30.407847];
+    }
+
     // Кастомный макет балуна
     const MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
       '<div class="custom-balloon">' +
@@ -69,7 +82,6 @@ const YandexMap = () => {
           const arrow = this._element.querySelector(".arrow");
           const arrowHeight = arrow ? arrow.offsetHeight : 0;
 
-          console.log(arrow.offsetHeight);
           return new ymaps.shape.Rectangle(
             new ymaps.geometry.pixel.Rectangle([
               [0, 0],
@@ -90,12 +102,14 @@ const YandexMap = () => {
     );
 
     // Инициализация карты
-    mapInstance.current = new ymaps.Map(mapRef.current, {
+    mapInstance.current = new ymaps.Map(mapRef.current, initialParams /* {
       center: [59.86401, 30.408437],
       zoom: 18,
       controls: ["zoomControl", "fullscreenControl"],
       margin: [200, 200, 100, 200],
-    });
+
+      // mobileScrollZoom: false,
+    }  */      );
 
     // Кастомный пресет метки
     ymaps.option.presetStorage.add("clinicPreset", {

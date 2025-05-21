@@ -73,6 +73,17 @@
   width: 95%;
 }
 
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.form-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .form-input:-webkit-autofill,
 .form-input:-webkit-autofill:focus,
 .form-input:-webkit-autofill:hover {
@@ -87,14 +98,14 @@
 
 .form-button {
   background-color: #31babe;
-  color:white;
+  color: white;
   margin: 15px 10px 0;
   border-radius: 4px;
   border: none;
   padding: 10px 5px;
   font-size: 17px;
   width: 95%;
-  font-weight: 650;;
+  font-weight: 650;
 }
 
 .form-select:focus {
@@ -109,8 +120,11 @@
   background-size: 20px 20px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 640px) {
   .callback-button {
-    top: 100px;
+    position: fixed;
+    top: auto;
+    bottom: 40px;
+    right: 10px;
   }
 }

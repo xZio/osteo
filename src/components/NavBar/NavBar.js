@@ -5,14 +5,22 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../../images/logo_final.png";
 import "./NavBar.css";
 import { FiAlignJustify } from "react-icons/fi";
+import { useState } from "react";
 
 function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <Navbar expand="sm" className="p-3">
+      <Navbar
+        expand="sm"
+       // className="p-3"
+        expanded={isOpen}
+        onToggle={(isOpen) => setIsOpen(isOpen)}
+      >
         <Container id="navbar" className="m-0">
           <Navbar.Brand>
-            <NavLink to="/" end>
+            <NavLink to="/osteo" end>
               <img
                 src={logo}
                 width="70"
@@ -25,13 +33,14 @@ function NavBar() {
           <Navbar.Toggle
             id="navButton"
             aria-controls="basic-navbar-nav "
+            className={isOpen ? "menu-open" : ""}
             children={<FiAlignJustify size={40} className="button-icon" />}
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as="div">
                 <NavLink
-                  to="/"
+                  to="/osteo"
                   end
                   className={({ isActive }) => (isActive ? "active-link" : "")}
                 >
@@ -40,7 +49,7 @@ function NavBar() {
               </Nav.Link>
               <Nav.Link as="div">
                 <NavLink
-                  to="/certificates"
+                  to="/osteo/certificates"
                   className={({ isActive }) => (isActive ? "active-link" : "")}
                 >
                   Опыт
@@ -48,7 +57,7 @@ function NavBar() {
               </Nav.Link>
               <Nav.Link as="div">
                 <NavLink
-                  to="/contacts"
+                  to="/osteo/contacts"
                   className={({ isActive }) => (isActive ? "active-link" : "")}
                 >
                   Контакты
@@ -56,10 +65,10 @@ function NavBar() {
               </Nav.Link>
               <Nav.Link as="div">
                 <NavLink
-                  to="/prices"
+                  to="/osteo/prices"
                   className={({ isActive }) => (isActive ? "active-link" : "")}
                 >
-                  Цены
+                  Цены и отзывы
                 </NavLink>
               </Nav.Link>
             </Nav>

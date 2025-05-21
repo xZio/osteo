@@ -17,7 +17,7 @@ function About() {
           </h2>
         </Col>
         <Row>
-          <Col sm={5} className="about-content">
+          <Col lg={5} md={7} sm={10} className="about-content">
             <p>
               Дорогие друзья, меня зовут <strong> Александр Челомбиткин</strong>
               ! <br /> Вот несколько интересных фактов обо мне:

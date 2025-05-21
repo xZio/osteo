@@ -1,5 +1,7 @@
+import YandexMapWidget from "../YandexFeedback/YandexFeedback";
+
 function Prices() {
-    return <div className="prices"> Prices </div>;
-  }
-  
-  export default Prices;
+  return <YandexMapWidget />;
+}
+
+export default Prices;
