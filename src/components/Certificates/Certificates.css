@@ -81,3 +81,25 @@
   border-radius: 14px;
   opacity: 1;
 }
+
+@media (max-width: 900px) {
+.swiper-slide {
+  width: 300px;
+  height: 200px;
+}
+
+@media (max-width: 550px) {
+.swiper-slide {
+  width: 220px;
+  height: 160px;
+}
+
+  } 
+@media (max-width: 420px) {
+.swiper-slide {
+  width: 180px;
+  height: 160px;
+}
+
+  }
+}
