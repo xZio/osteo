@@ -1,3 +1,4 @@
+
 import './YandexFeedback.css';
 
 const YandexMapWidget = () => {
@@ -18,7 +19,7 @@ const YandexMapWidget = () => {
         Кабинет остеопата на карте Санкт‑Петербурга — Яндекс Карты
       </a>
     </div>
-  );
-};
+  )
+}
 
 export default YandexMapWidget;

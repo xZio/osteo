@@ -1,0 +1,27 @@
+.prices {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+.prices h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 35px;
+    padding-bottom: 50px;
+}
+
+.prices-container {
+     border: 2px solid #31babe;
+     border-radius: 8px;
+     max-width: 700px;
+     height: 100vh;
+     margin: 0 auto;
+     padding: 20px;
+}
+
+.prices-container p {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: left;
+}

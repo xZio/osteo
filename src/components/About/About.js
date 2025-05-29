@@ -8,7 +8,7 @@ import "./About.css";
 function About() {
   return (
     <>
-      <Container fluid className="about no-padding">
+      <Container fluid className="about ">
         <Col md={9} className="about-header">
           <h1>Остеопат</h1>
           <h2>

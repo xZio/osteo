@@ -95,9 +95,9 @@
 }
 
   } 
-@media (max-width: 420px) {
+@media (max-width: 550px) {
 .swiper-slide {
-  width: 180px;
+  width: 220px;
   height: 160px;
 }
 

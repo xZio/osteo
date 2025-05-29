@@ -17,7 +17,7 @@
 .contact-column {
   display: flex;
   flex-direction: column;
-  
+
   margin-top: 20px;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .vertical-video-wrapper {
-  width: 100%;
+
   max-width: 300px;
   height: 500px;
   margin: 0 auto;
@@ -95,7 +95,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  
+
 
 }
 

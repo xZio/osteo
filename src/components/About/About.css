@@ -1,11 +1,22 @@
 .about {
   position: relative;
-  background-image: url(../../images/slider2.jpg);
+  background: 
+    linear-gradient(
+      to left, 
+      rgba(255, 255, 255, 0) 0%, 
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.2) 70%,
+      rgba(255, 255, 255, 0.8) 100%
+    ),
+    url(../../images/aboutbg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right top;
   min-height: calc(100vh - 180px);
+  background-blend-mode: lighten;
 }
+
+
 
 .about-header {
   display: flex;
@@ -14,13 +25,13 @@
 }
 
 
-ul {
+/* .ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
-}
+} */
 
 .about h1 {
   font-size: 50px;
@@ -42,14 +53,14 @@ ul {
   padding-left: 30px;
 }
 
-p {
+.about p {
   font-weight: 500;
   margin-bottom: 10px;
   text-align: start;
   padding-left: 10px;
 }
 
-li {
+.about li {
   display: flex;
   font-weight: 500;
 }
@@ -70,6 +81,4 @@ li {
   font-weight: 700;
 }
 
-.row {
-  --bs-gutter-x: 0;
-}
+

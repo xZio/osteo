@@ -14,7 +14,7 @@ function NavBar() {
     <>
       <Navbar
         expand="sm"
-       // className="p-3"
+        // className="p-3"
         expanded={isOpen}
         onToggle={(isOpen) => setIsOpen(isOpen)}
       >
