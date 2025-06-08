@@ -6,7 +6,7 @@ import AirDatepicker from "air-datepicker";
 import "air-datepicker/air-datepicker.css";
 import { useClickOutside } from "../../hooks/useClickOutside";
 
-function CallbackForm() {
+function CallbackForm({ toggleForm, isFormOpen }) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -19,30 +19,37 @@ function CallbackForm() {
   const dateRef = useRef(null);
 
   useEffect(() => {
-    // Инициализация AirDatepicker
-    new AirDatepicker("#dateInput", {
-      minDate: Date.now(),
-      autoClose: true,
-      onSelect: function (formattedDate) {
-        setFormData({ ...formData, date: formattedDate.formattedDate });
-      },
-    });
-  }, [formData]);
+    if (isFormOpen) {
+      // Инициализация AirDatepicker
+      new AirDatepicker("#dateInput", {
+        minDate: Date.now(),
+        autoClose: true,
+        onSelect: function (formattedDate) {
+          setFormData({ ...formData, date: formattedDate.formattedDate });
+        },
+      });
+    }
+  }, [formData, isFormOpen]);
+
+  useEffect(() => {
+    const form = formRef.current;
+    const overlay = document.querySelector(".callback-overlay");
+    if (isFormOpen) {
+      form.classList.add("callback-form-active");
+      overlay.classList.add("callback-overlay-active");
+    } else {
+      form.classList.remove("callback-form-active");
+      overlay.classList.remove("callback-overlay-active");
+    }
+  }, [isFormOpen]);
 
   useClickOutside(formRef, (e) => {
     const calendar = document.querySelector(".air-datepicker-nav");
-    if (!calendar && !e.target.closest(".callback-button")) {
-      document
-        .querySelector(".callback-form")
-        .classList.remove("callback-form-active");
+
+    if (!calendar && !e.target.closest(".callback-button") && isFormOpen) {
+      toggleForm();
     }
   });
-
-  function handleFormOpen() {
-    formRef.current.classList.value.includes("callback-form-active")
-      ? formRef.current.classList.remove("callback-form-active")
-      : formRef.current.classList.add("callback-form-active");
-  }
 
   function handleAccept(value, data) {
     setFormData((prev) => ({
@@ -58,10 +65,11 @@ function CallbackForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
+
     console.log("Submitted data:", formData);
     setFormData({});
     if (formRef.current) formRef.current.reset();
-    formRef.current.classList.remove("callback-form-active");
+    toggleForm();
   }
 
   function generateTimeOptions() {
@@ -84,12 +92,14 @@ function CallbackForm() {
 
   return (
     <div className="callback-container">
-      <button className="callback-button" onClick={handleFormOpen}>
+      <button className="callback-button" onClick={toggleForm}>
         <RiPhoneFill className="phone-logo" />
       </button>
 
+      <div className="callback-overlay"></div>
       <form ref={formRef} className="callback-form" onSubmit={handleSubmit}>
         <div className="form-group">
+          <span className="input-span">Имя:</span>
           <input
             type="text"
             className="form-input"
@@ -100,6 +110,7 @@ function CallbackForm() {
             maxLength={20}
             required
           ></input>
+          <span className="input-span">Телефон:</span>
           <IMaskInput
             name="phone"
             type="tel"
@@ -114,6 +125,7 @@ function CallbackForm() {
             className="form-input"
             required
           />
+          <span className="input-span">Дата:</span>
           <IMaskInput
             id="dateInput"
             name="date"
@@ -130,22 +142,22 @@ function CallbackForm() {
             autoComplete="off"
             required
           />
+          <span className="input-span">Время:</span>
+          <select
+            name="time"
+            value={formData.time}
+            onChange={handleChange}
+            className="form-select"
+            required
+          >
+            <option value="">Выберите время</option>
+            {generateTimeOptions().map((time) => (
+              <option key={time} value={time}>
+                {time}
+              </option>
+            ))}
+          </select>
         </div>
-
-        <select
-          name="time"
-          value={formData.time}
-          onChange={handleChange}
-          className="form-select"
-          required
-        >
-          <option value="">Выберите время</option>
-          {generateTimeOptions().map((time) => (
-            <option key={time} value={time}>
-              {time}
-            </option>
-          ))}
-        </select>
 
         <button type="submit" className="form-button" onClick={handleSubmit}>
           Отправить

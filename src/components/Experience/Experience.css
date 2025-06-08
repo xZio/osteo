@@ -59,6 +59,11 @@
   background: linear-gradient(to right, #31babe 0%, rgba(49, 186, 190, 0) 100%);
 }
 
+.expierence-list-text {
+  text-align: left;
+  hyphens: auto;
+  -webkit-hyphens: auto; /* Для Safari */
+  -ms-hyphens: auto; /* Для IE10+ */
 
-
-  
+  overflow-wrap: break-word;
+}

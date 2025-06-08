@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"; // Измененный импорт
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../images/logo12.png";
+import logo from "../../images/logo.png";
 import "./NavBar.css";
 import { FiAlignJustify } from "react-icons/fi";
 import { useState } from "react";
@@ -14,7 +14,6 @@ function NavBar() {
     <>
       <Navbar
         expand="sm"
-        // className="p-3"
         expanded={isOpen}
         onToggle={(isOpen) => setIsOpen(isOpen)}
       >

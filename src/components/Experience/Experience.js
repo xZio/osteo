@@ -18,7 +18,7 @@ function Experience() {
                     <IoMdCheckmarkCircleOutline size={25} />
                     <span>{el.year}</span>
                   </div>
-                  <p>{el.name} </p>
+                  <p className="expierence-list-text">{el.name} </p>
                 </li>
               );
             })}

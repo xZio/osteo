@@ -9,7 +9,7 @@ function About() {
   return (
     <>
       <Container fluid className="about ">
-        <Col md={9} className="about-header">
+        <Col md={9} sm={6} className="about-header">
           <h1>Остеопат</h1>
           <h2>
             <span>Мануальный</span>
@@ -17,7 +17,7 @@ function About() {
           </h2>
         </Col>
         <Row>
-          <Col lg={5} md={7} sm={10} className="about-content">
+          <Col lg={5} md={10} sm={10} className="about-content">
             <p>
               Дорогие друзья, меня зовут <strong> Александр Челомбиткин</strong>
               ! <br /> Вот несколько интересных фактов обо мне:

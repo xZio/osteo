@@ -76,7 +76,7 @@
 
 /* Стили для кнопки бургер-меню */
 .navbar-toggler {
-  padding: 6px 15px;
+  padding: 10px 20px;
   border: 1px solid #31babe;
   transition: border 0.2s ease;
 }
@@ -133,23 +133,24 @@
   }
 
   /* Корректировка подчеркивания для мобильных */
-/*   #navbar a::before {
+  /*   #navbar a::before {
     bottom: 5px;
   } */
 
   #navbar a.active-link::before,
   #navbar a:hover::before {
-    left: 5px;
-    right: 5px;
+    left: 0;
+    right: 0;
+  }
+  #navbar a {
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-@media (max-width: 360px) {
-  .logo {
-    margin-left: 10px;
-  }
-
-  .navbar-nav {
-    padding-left: 10px;
+@media (max-width: 575px) {
+  #navbar a {
+    font-size: 20px;
   }
 }
