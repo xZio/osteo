@@ -155,6 +155,11 @@
   font-weight: 650;
 }
 
+.contact-section {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
 @media (max-width: 910px) {
   .contact {
     padding-left: 0;
