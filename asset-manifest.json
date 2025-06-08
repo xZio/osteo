@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/osteo/static/css/main.15cd7e92.css",
-    "main.js": "/osteo/static/js/main.bb17e365.js",
+    "main.css": "/osteo/static/css/main.e2f9053e.css",
+    "main.js": "/osteo/static/js/main.42047bd2.js",
     "static/media/RoadTo.mp4": "/osteo/static/media/RoadTo.bb08207f3aad44dfec38.mp4",
     "static/media/logo.png": "/osteo/static/media/logo.2721b73b383cd2753fdf.png",
     "static/media/Montserrat-VariableFont_wght.ttf": "/osteo/static/media/Montserrat-VariableFont_wght.4df14eb5e72bf55c4497.ttf",
@@ -20,11 +20,11 @@
     "static/media/mark.png": "/osteo/static/media/mark.0048995f6990eb0cef18.png",
     "static/media/calendar.svg": "/osteo/static/media/calendar.e0fafd4bf252c5e32412.svg",
     "index.html": "/osteo/index.html",
-    "main.15cd7e92.css.map": "/osteo/static/css/main.15cd7e92.css.map",
-    "main.bb17e365.js.map": "/osteo/static/js/main.bb17e365.js.map"
+    "main.e2f9053e.css.map": "/osteo/static/css/main.e2f9053e.css.map",
+    "main.42047bd2.js.map": "/osteo/static/js/main.42047bd2.js.map"
   },
   "entrypoints": [
-    "static/css/main.15cd7e92.css",
-    "static/js/main.bb17e365.js"
+    "static/css/main.e2f9053e.css",
+    "static/js/main.42047bd2.js"
   ]
 }
