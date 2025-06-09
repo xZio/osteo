@@ -1,5 +1,3 @@
-/* NavBar.css */
-
 .logo {
   width: 130px;
   height: 130px;
@@ -11,10 +9,15 @@
   flex-grow: 1;
 }
 
-.container {
+#navbar {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+}
+
+.colapsed-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Основные стили для всех ссылок */
@@ -59,6 +62,7 @@
   left: 8px;
   opacity: 1;
 }
+
 /* Отключаем подчеркивание для логотипа */
 .navbar-brand a::before {
   display: none !important;
@@ -71,7 +75,7 @@
 }
 
 .navbar-brand a {
-  border: none !important; /* Если есть граница */
+  border: none !important;
 }
 
 /* Стили для кнопки бургер-меню */
@@ -79,6 +83,7 @@
   padding: 10px 20px;
   border: 1px solid #31babe;
   transition: border 0.2s ease;
+  margin-left: auto;
 }
 
 /* .navbar-toggler:hover {
@@ -108,20 +113,23 @@
   height: auto;
   transition: none !important;
 }
+
 .navbar-collapse.show {
   height: auto;
   transition: height 0.4s ease !important;
 }
 
 /* Медиа-запросы для мобильных устройств */
-@media (max-width: 768px) {
+
+@media (max-width: 1150px) {
   #navbar {
     padding: 0;
     margin: 0;
   }
+
   .navbar {
-    padding: 10px 0 !important;
     margin: 0;
+    padding: 0;
   }
 
   .navbar-nav {
@@ -142,10 +150,20 @@
     left: 0;
     right: 0;
   }
+
   #navbar a {
-    font-size: 16px;
+    font-size: 19px;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 670px) {
+  #navbar a {
+    font-size: 16px;
+  }
+  .navbar-brand {
+    margin: 0 !important;
   }
 }
 
@@ -153,4 +171,5 @@
   #navbar a {
     font-size: 20px;
   }
+ 
 }

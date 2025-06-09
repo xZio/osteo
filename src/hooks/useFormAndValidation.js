@@ -1,5 +1,4 @@
 import { useState, useCallback, useRef } from "react";
-import isEmail from "validator/lib/isEmail";
 
 export function useFormAndValidation() {
   const [values, setValues] = useState({});
@@ -10,16 +9,23 @@ export function useFormAndValidation() {
   // Удаляем все DOM-манипуляции, работаем только с состоянием
   const handleDateChange = (e) => {
     const { name, value } = e.target;
-    let formattedValue = value.replace(/\D/g, '');
-    
-    if (formattedValue.length > 8) formattedValue = formattedValue.slice(0, 8);
-    if (formattedValue.length > 4) formattedValue = `${formattedValue.slice(0, 2)}.${formattedValue.slice(2, 4)}.${formattedValue.slice(4)}`;
-    else if (formattedValue.length > 2) formattedValue = `${formattedValue.slice(0, 2)}.${formattedValue.slice(2)}`;
+    let formattedValue = value.replace(/\D/g, "");
 
-    setValues(prev => ({ ...prev, [name]: formattedValue }));
+    if (formattedValue.length > 8) formattedValue = formattedValue.slice(0, 8);
+    if (formattedValue.length > 4)
+      formattedValue = `${formattedValue.slice(0, 2)}.${formattedValue.slice(
+        2,
+        4
+      )}.${formattedValue.slice(4)}`;
+    else if (formattedValue.length > 2)
+      formattedValue = `${formattedValue.slice(0, 2)}.${formattedValue.slice(
+        2
+      )}`;
+
+    setValues((prev) => ({ ...prev, [name]: formattedValue }));
   };
 
- /*  const handlePhoneChange = (e) => {
+  /*  const handlePhoneChange = (e) => {
     const { name, value } = e.target;
     const cleaned = value.replace(/\D/g, '');
     
@@ -34,9 +40,12 @@ export function useFormAndValidation() {
 
   const handleChange = (e) => {
     const { name, value, validity } = e.target;
-    
-    setValues(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: validity.valid ? '' : 'Ошибка ввода' }));
+
+    setValues((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({
+      ...prev,
+      [name]: validity.valid ? "" : "Ошибка ввода",
+    }));
     setIsValid(formRef.current.checkValidity());
   };
 
@@ -57,6 +66,6 @@ export function useFormAndValidation() {
     resetForm,
     setValues,
     setIsValid,
-    formRef // Добавляем formRef в возвращаемые значения
+    formRef, // Добавляем formRef в возвращаемые значения
   };
 }

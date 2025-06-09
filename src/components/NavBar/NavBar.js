@@ -17,7 +17,7 @@ function NavBar() {
         expanded={isOpen}
         onToggle={(isOpen) => setIsOpen(isOpen)}
       >
-        <Container id="navbar" className="m-0">
+        <Container id="navbar" fluid className="d-flex justify-content-between align-items-center w-100">
           <Navbar.Brand>
             <NavLink to="/osteo" end>
               <img
@@ -35,6 +35,7 @@ function NavBar() {
             className={isOpen ? "menu-open" : ""}
             children={<FiAlignJustify size={40} className="button-icon" />}
           />
+
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as="div">
