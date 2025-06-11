@@ -5,26 +5,14 @@ import { IMaskInput } from "react-imask";
 import AirDatepicker from "air-datepicker";
 import "air-datepicker/air-datepicker.css";
 import { useClickOutside } from "../../hooks/useClickOutside";
-import { useFormAndValidation } from "../../hooks/useFormAndValidation";
 
 function CallbackForm({ toggleForm, isFormOpen }) {
-  /*   const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     phone: "",
     date: "",
     time: "",
-  }); */
-
-  const {
-    values,
-    handleChange,
-    errors,
-    isValid,
-    setValues,
-    setErrors,
-    handleAccept,
-    validateForm,
-  } = useFormAndValidation();
+  });
 
   const formRef = useRef(null);
   const phoneRef = useRef(null);
@@ -37,11 +25,11 @@ function CallbackForm({ toggleForm, isFormOpen }) {
         minDate: Date.now(),
         autoClose: true,
         onSelect: function (formattedDate) {
-          setValues({ ...values, date: formattedDate.formattedDate });
+          setFormData({ ...formData, date: formattedDate.formattedDate });
         },
       });
     }
-  }, [setValues, values, isFormOpen]);
+  }, [formData, isFormOpen]);
 
   useEffect(() => {
     const form = formRef.current;
@@ -63,26 +51,23 @@ function CallbackForm({ toggleForm, isFormOpen }) {
     }
   });
 
-  /*  function handleAccept(value, data) {
-    setValues((prev) => ({
+  function handleAccept(value, data) {
+    setFormData((prev) => ({
       ...prev,
       [data.el.input.name]: value,
     }));
-  } */
+  }
 
-  /*  function handleChange(e) {
+  function handleChange(e) {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  } */
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    validateForm();
-    /*  console.log(isValid, "isValid");
-    console.log(errors, "errors");
-    console.log(values, "values"); */
-    setValues({});
+    console.log("Submitted data:", formData);
+    setFormData({});
     if (formRef.current) formRef.current.reset();
     toggleForm();
   }
@@ -121,7 +106,7 @@ function CallbackForm({ toggleForm, isFormOpen }) {
             placeholder="Введите ваше имя"
             name="name"
             onChange={handleChange}
-            value={values.name || ""}
+            value={formData.name || ""}
             maxLength={20}
             required
           ></input>
@@ -132,7 +117,7 @@ function CallbackForm({ toggleForm, isFormOpen }) {
             ref={phoneRef}
             mask={"+7 (000) 000-00-00"}
             onAccept={handleAccept}
-            value={values.phone || ""}
+            value={formData.phone || ""}
             overwrite="shift"
             lazy={false} // Маска видна постоянно
             unmask={false} // Сохраняем маску в значении
@@ -148,7 +133,7 @@ function CallbackForm({ toggleForm, isFormOpen }) {
             ref={dateRef}
             mask={Date}
             onAccept={handleAccept}
-            value={values.date || ""}
+            value={formData.date || ""}
             overwrite="shift"
             lazy={false} // Маска видна постоянно
             unmask={false} // Сохраняем маску в значении
@@ -160,7 +145,7 @@ function CallbackForm({ toggleForm, isFormOpen }) {
           <span className="input-span">Время:</span>
           <select
             name="time"
-            value={values.time}
+            value={formData.time}
             onChange={handleChange}
             className="form-select"
             required

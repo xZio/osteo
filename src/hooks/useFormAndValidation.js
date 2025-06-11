@@ -1,71 +1,94 @@
 import { useState, useCallback, useRef } from "react";
 
 export function useFormAndValidation() {
-  const [values, setValues] = useState({});
-  const [errors, setErrors] = useState({});
-  const [isValid, setIsValid] = useState(true);
-  const formRef = useRef(null); // Добавляем ref для формы
+  const [values, setValues] = useState({
+    name: "",
+    phone: "",
+    date: "",
+    time: "",
+  });
+  const [errors, setErrors] = useState({
+    name: "",
+    phone: "",
+    date: "",
+    time: "",
+  });
+  const [isValid, setIsValid] = useState(false);
 
-  // Удаляем все DOM-манипуляции, работаем только с состоянием
-  const handleDateChange = (e) => {
-    const { name, value } = e.target;
-    let formattedValue = value.replace(/\D/g, "");
-
-    if (formattedValue.length > 8) formattedValue = formattedValue.slice(0, 8);
-    if (formattedValue.length > 4)
-      formattedValue = `${formattedValue.slice(0, 2)}.${formattedValue.slice(
-        2,
-        4
-      )}.${formattedValue.slice(4)}`;
-    else if (formattedValue.length > 2)
-      formattedValue = `${formattedValue.slice(0, 2)}.${formattedValue.slice(
-        2
-      )}`;
-
-    setValues((prev) => ({ ...prev, [name]: formattedValue }));
+  const validationRules = {
+    name: (value) => {
+      if (value === "") return "Имя обязательно для заполнения";
+      if (value.trim().length < 2)
+        return "Имя должно содержать минимум 2 символа";
+      if (!/^[a-zA-Zа-яА-ЯёЁ\s-]+$/.test(value))
+        return "Имя содержит недопустимые символы";
+      return null;
+    },
+    phone: (value) => {
+      if (!value || value === "+7 (___) ___-__-__")
+        return "Телефон обязателен для заполнения";
+      return null;
+    },
+    date: (value) => {
+      if (value === "" || !value || value === "__.__.____" )
+        return "Дата обязательна для заполнения";
+      if (!/^\d{2}\.\d{2}\.\d{4}$/.test(value))
+        return "Некорректный формат даты";
+      return null;
+    },
+    time: (value) => {
+      if (!value || value === "") return "Время обязательно для выбора";
+      return null;
+    },
   };
-
-  /*  const handlePhoneChange = (e) => {
-    const { name, value } = e.target;
-    const cleaned = value.replace(/\D/g, '');
-    
-    let formatted = '+7 (';
-    if (cleaned.length > 1) {
-      const rest = cleaned.slice(1);
-      formatted += `${rest.slice(0, 3)}) ${rest.slice(3, 6)}-${rest.slice(6, 8)}-${rest.slice(8, 10)}`;
-    }
-    
-    setValues(prev => ({ ...prev, [name]: formatted }));
-  }; */
 
   const handleChange = (e) => {
-    const { name, value, validity } = e.target;
-
+    const { name, value } = e.target;
     setValues((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({
-      ...prev,
-      [name]: validity.valid ? "" : "Ошибка ввода",
-    }));
-    setIsValid(formRef.current.checkValidity());
+    setErrors((prev) => ({ ...prev, [name]: validationRules[name](value) }));
+    setIsValid(e.target.closest("form").checkValidity());
   };
 
-  const resetForm = useCallback(() => {
-    setValues({});
-    setErrors({});
-    setIsValid(false);
-    if (formRef.current) formRef.current.reset();
-  }, []);
+  const handleAccept = (value, data) => {
+    setValues((prev) => ({
+      ...prev,
+      [data.el.input.name]: value,
+    }));
+    setErrors((prev) => ({
+      ...prev,
+      [data.el.input.name]: validationRules[data.el.input.name](value),
+    }));
+  };
+
+  const validateForm = () => {
+    Object.entries(validationRules).forEach(([field, validateFn]) => {
+      //console.log(errors[field] === "", "errors[field]");
+      //console.log(validateFn(errors[field]));
+      if (errors[field] === "") {
+        //console.log(errors[field], "errors[field]");
+        setErrors((prev) => ({
+          ...prev,
+          [field]: validateFn(errors[field]),
+        }));
+        
+      }
+
+      //console.log(field, "field");
+      //console.log(typeof validateFn, "validateFn");
+    });
+    console.log(errors, "errors");
+    return errors;
+  };
 
   return {
     values,
     handleChange,
-    handleDateChange,
-    //handlePhoneChange,
+    handleAccept,
     errors,
     isValid,
-    resetForm,
     setValues,
+    setErrors,
     setIsValid,
-    formRef, // Добавляем formRef в возвращаемые значения
+    validateForm,
   };
 }
